@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Sora:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&family=Sora:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <title>Home Bancolombia</title>
+    </head>
+    <body onload="user()" >
+        <header>
+            <ul class="he__li" >
+                <li class="li__img" >
+                    <img class="img" src="../assets/images/logo-bancolombia+(1).png" alt="image bank logo">
+                </li>
+                <div class="li__if">
+                    <li class="if if--pr">
+                        <p class="pr--s" >Balance: <span class="pr"></span></p>
+                    </li>
+                    <li class="if if--na">
+                        <button class="na ctr--fn" >Ajustes</button>
+                    </li>
+                    <div class="ctr--acc acc--ctr--des" >
+                        <p class="acc--p" >Email: <span class="sp em" >nicolas@gmail.com</span></p>
+                        <p class="acc--p" >First name: <span class="sp fn" ></span></p>
+                        <p class="acc--p" >Last name: <span class="sp ln" ></span></p>
+                        <button class="acc--bu" onclick="signOut()" >Log out</button>
+                    </div>
+                </div>
+            </ul>
+        </header>
+        <main>
+            <section class="ctr--if">
+                <p class="if__na">Hello! <span class="wfn"></span></p>
+
+                <label class="btn__lb" for="deposit">Enter amount to deposit</label>
+                <div class="if__btn">
+                    <input class="btn__in" type="number" name="deposit" id="deposit" placeholder="Just numbers" >
+                    <button class="btn de" onclick="toDepositBalance()" >Deposit</button>
+                </div>
+                <label class="btn__lb" for="withdraw">Enter amount to withdraw</label>
+                <div class="if__btn">
+                    <input class="btn__in" type="number" name="withdraw" id="withdraw" placeholder="Just numbers" >
+                    <button class="btn wi" onclick="withdrawBalance()" >Withdraw</button>
+                </div>
+                <section class="ctr--me" id="me">
+                </section>
+            </section>
+        </main>
+    </body>
+    <script src="../controllers/home.js"></script>
+</html>
